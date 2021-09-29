@@ -4,10 +4,14 @@
 }
 
 @font-face {
-    font-family: "RedHatDisplay-Bold";
-    src: url("../fonts/RedHatDisplay-ExtraBold.ttf") format("truetype");
+    font-family: "RedHatDisplay-Regular";
+    src: url("../fonts/RedHatDisplay-Regular.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: "RedHatDisplay-Bold";
+    src: url("../fonts/RedHatDisplay-Black.ttf") format("truetype");
+}
 
 body{
     padding: 0;
@@ -23,6 +27,7 @@ body{
 
 .component{
     width: 1152px;
+    min-width: 300px;
     height: 100%;
     background-color: hsl(225, 100%, 94%);
     background-image: url("../images/pattern-background-desktop.svg");
@@ -57,27 +62,28 @@ body{
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    font-family: "RedHatDisplay";
+    font-family: "RedHatDisplay-bold";
     font-size: 16px;
 }
 
 .title{
     display: flex;
     justify-content: center;
-    margin-top: 40px;
-    font-size: 21px;
-    font-family: "RedHatDisplay-bold";
+    margin-top: 41px;
+    font-size: 22px;
+    font-weight: 1000;
     color: #1f2f56;
 }
 
 .intro{
-    margin-top: 20px;
+    margin-top: 18px;
     color: #7280a7;
     text-align: center;
     line-height: 20px;
+    font-family: "RedHatDisplay";
     font-size: 13px;
-    font-weight: 500;
-
+    font-weight: 700;
+    word-spacing: 0.4px;
 }
 
 .offer{
@@ -108,6 +114,7 @@ body{
 
 .offer__left__text__p{
     color: #1f2f56;
+    font-family: "RedHatDisplay-bold";
     font-size: 13px;
     font-weight: 900;
 }
@@ -115,31 +122,53 @@ body{
 .offer__left__text__price{
     margin-top: 8px;
     color: #7280a7;
+    font-family: "RedHatDisplay";
+    font-weight: 700;
     font-size: 13px;
+    letter-spacing: 0.5px;
 }
 
 .offer__right{
     font-size: 11px;
-    font-weight: bold;
+    font-weight: 900;
     margin-right: 19px;
 }
 
-button{
-    text-align: center;
+.offer__right:hover{
+    text-decoration: none;
+    opacity: 0.5;
+}
+
+.button{
     background-color: #382ae1;
     border: none;
     border-radius: 9px;
-    color: white;
-    padding: 12px 0;
     margin-top: 25px;
+    padding: 12px 0;
+    font-family: "RedHatDisplay";
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    color: white;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+}
+
+.button:hover{
+    opacity: 0.5;
 }
 
 .cancel{
-    margin-top: 30px;
+    margin-top: 28px;
     text-align: center;
     text-decoration: none;
-    font-size: 11px;
-    font-weight: 900;
+    font-size: 12px;
+    font-weight: 1000;
+    color: #7280a7;
+}
+
+.cancel:hover{
+    color: #1f2f56;
 }
 
 .attribution{
